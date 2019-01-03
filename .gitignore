@@ -1,3 +1,4 @@
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -102,3 +103,10 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# Mac OS
+.DS_Store
+
+# if we include these the corpus repo will be too large
+downloads/*/*.mp3
+downloads/*/*.pdf
