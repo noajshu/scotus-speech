@@ -1,11 +1,11 @@
 # scotus-speech
 Corpus of oral arguments (recorded speech + official transcripts) of the Supreme Court of the United States (SCOTUS).
 
-**Identifier:** SCOTUS
-**Summary:** Medium-scale (594 hours 42 minutes 13 seconds) corpus of professionally transcribed formal conversational English speech
-**Category:** Speech
-**Lincese:** MIT
-**Download mirrors:** TBD
+### Identifier: SCOTUS
+### Summary: Medium-scale (594 hours 42 minutes 13 seconds) corpus of professionally transcribed formal conversational English speech
+### Category: Speech
+### Lincese: MIT
+### Download mirrors: TBD
 
 ## About this resource:
 Scotus Speech is a collection of oral arguments presented before SCOTUS between 2010 and 2018. The conversations (arguments) are formal dialogues between attorneys (counsel) and justices.
