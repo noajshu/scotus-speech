@@ -8,7 +8,7 @@ Corpus of oral arguments (recorded speech + official transcripts) of the Supreme
 <!-- ### Download mirrors: TBD -->
 
 ## Get the data:
-`bash steps.sh` will run the three steps of the pipeline:
+`bash steps.sh` will run the pipeline:
 
 1. scrape the SCOTUS website
 2. download all transcript PDFs and recording MP3s
