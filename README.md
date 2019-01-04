@@ -7,6 +7,15 @@ Corpus of oral arguments (recorded speech + official transcripts) of the Supreme
 ### Lincese: MIT
 <!-- ### Download mirrors: TBD -->
 
+## Get the data:
+`bash steps.sh` will run the three steps of the pipeline:
+
+1. scrape the SCOTUS website
+2. download all transcript PDFs and recording MP3s
+3. parse PDF transcripts into conversation text, extracting speaker information
+4. tokenize transcripts to the word and punctuation level
+
+
 ## About this resource:
 Scotus Speech is a collection of oral arguments presented before SCOTUS between 2010 and 2018. The conversations (arguments) are formal dialogues between attorneys (counsel) and justices.
 
@@ -25,14 +34,6 @@ As all recordings and transcripts are in the public domain [see SCOTUS website](
 - language modeling of legal dialogue
 - academic study of SCOTUS oral arguments
 - chatbots / AI
-
-## How to generate the data
-The script `steps.sh` will run the three steps of the pipeline:
-
-1. scrape the SCOTUS website
-2. download all transcript PDFs and recording MP3s
-3. parse PDF transcripts into conversation text, extracting speaker information
-4. tokenize transcripts to the word and punctuation level
 
 
 ## Format notes
