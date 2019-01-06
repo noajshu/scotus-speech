@@ -8,7 +8,9 @@ Corpus of oral arguments (recorded speech + official transcripts) of the Supreme
 <!-- ### Download mirrors: TBD -->
 
 ## Get the data:
-`bash steps.sh` will run the pipeline:
+
+## Regenerate the data:
+`bash steps.sh` will run the pipeline (takes a few days 4 cores). It is recommended to run the steps.sh lines one-by-one to make sure there are no intermediate errors.
 
 1. scrape the SCOTUS website
 2. download all transcript PDFs and recording MP3s
@@ -35,6 +37,8 @@ As all recordings and transcripts are in the public domain [see SCOTUS website](
 - academic study of SCOTUS oral arguments
 - chatbots / AI
 
+Forced alignment the transcripts to audio is achieved by the [aeneas package](https://www.readbeyond.it/aeneas/).
+
 
 ## Format notes
 Each step manipulates data in the [JSON Lines](http://jsonlines.org/) structured data format.
@@ -45,7 +49,8 @@ For simple parsing tasks, JSONL format enables...
 - schema flexibility
 - portability
 
-In the future I would like to export this corpus to formats supported by [Kaldi](http://kaldi-asr.org/doc/data_prep.html) and [Kur](https://kur.deepgram.com/in_depth_examples.html#deepgram10-speech-recognition). First we need to run forced alignment and break down the 1 hour oral arguments into 4 - 25 second chunks.
+It is very easy to export this corpus to formats supported by [Kur](https://kur.deepgram.com/in_depth_examples.html#deepgram10-speech-recognition) and  [Kaldi](http://kaldi-asr.org/doc/data_prep.html). A script `convert.py` is included that does the job for Kur corpus format.
+
 
 ## Benefits:
 - Named (and mostly gendered) speaker labels
@@ -64,6 +69,3 @@ In the future I would like to export this corpus to formats supported by [Kaldi]
 - often repeated speakers (the justices)
 - some repeated utterances (formal procedure)
 
-
-## To-dos
-The most important next step is to run forced alignment to elucidate word timings. This will enable many of the applications mentioned above.
