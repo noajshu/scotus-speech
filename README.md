@@ -38,7 +38,7 @@ As all recordings and transcripts are in the public domain [see SCOTUS website](
 
 ## Format notes
 Each step manipulates data in the [JSON Lines](http://jsonlines.org/) structured data format.
-For simple parsing tasks, this format enables...
+For simple parsing tasks, JSONL format enables...
 
 - fast debugging using [jq](https://stedolan.github.io/jq/)
 - small file size (as long as compression is enabled)
@@ -53,6 +53,7 @@ In the future I would like to export this corpus to formats supported by [Kaldi]
 - Punctuation and capitalization
 - Public domain data
 - Historically significant data
+- Some audio contains multiple speakers when the courtroom is rowdy (this may be a disadvantage depending on your ASR goals)
 
 ## Disadvantages:
 - unaligned transcripts (no word-level timestamps) (coming soon!)
@@ -61,7 +62,8 @@ In the future I would like to export this corpus to formats supported by [Kaldi]
     - conversation topics
     - conversation styles
 - often repeated speakers (the justices)
-- often repeated utterances (formal proceedings)
+- some repeated utterances (formal procedure)
+
 
 ## To-dos
 The most important next step is to run forced alignment to elucidate word timings. This will enable many of the applications mentioned above.
