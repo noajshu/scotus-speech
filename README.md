@@ -1,6 +1,8 @@
 # scotus-speech
 Corpus of oral arguments (recorded speech + official transcripts) of the Supreme Court of the United States (SCOTUS).
 
+[Demo video here](https://youtu.be/UK5c_uxvUgU)
+
 <!-- ### Identifier: SCOTUS -->
 ### Summary: Medium-scale (594 hours 42 minutes 13 seconds) corpus of professionally transcribed formal conversational English speech
 ### Category: Speech
@@ -69,3 +71,7 @@ It is very easy to export this corpus to formats supported by [Kur](https://kur.
 - often repeated speakers (the justices)
 - some repeated utterances (formal procedure)
 
+
+## Next Steps
+The alignment is very good but not 100% perfect. Espeak gives known failure cases. I would like to configure festival and see if it overcomes these failure cases.
+I've tried AWS Polly as the STT backend and found it to work extremely well with no failure cases yet, however the corpus is 35,652,395 characters which would cost about $140 for Polly STT on the whole thing. Before spending on that I want to do some benchmarks / training / data analysis of the corpus to make sure it's ready.
