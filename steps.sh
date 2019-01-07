@@ -1,7 +1,13 @@
+# on mac:
 xcode-select --install; brew update; brew install sox ffmpeg espeak
-pip install numpy
-pip install aeneas
+# on ubuntu:
+sudo apt-get update
+sudo apt-get install -y build-essential libpoppler-cpp-dev \
+    pkg-config python-dev ffmpeg sox espeak jq parallel
+
 pip install -r requirements.txt
+pip install numpy bs4 pdftotext requests
+pip install aeneas
 python scrape.py
 bash download.sh
 python parse_pdf.py
