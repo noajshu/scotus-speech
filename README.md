@@ -49,7 +49,7 @@ For simple parsing tasks, JSONL format enables...
 - schema flexibility
 - portability
 
-It is very easy to export this corpus to formats supported by [Kur](https://kur.deepgram.com/in_depth_examples.html#deepgram10-speech-recognition) and  [Kaldi](http://kaldi-asr.org/doc/data_prep.html). A script `convert.py` is included that does the job for Kur corpus format.
+It is very easy to export this corpus to formats supported by [Kur](https://kur.deepgram.com/in_depth_examples.html#deepgram10-speech-recognition) and  [Kaldi](http://kaldi-asr.org/doc/data_prep.html). A script `convert_corpus.py` is included that does the job for Kur corpus format.
 
 
 ## Benefits:
