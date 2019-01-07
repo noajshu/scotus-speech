@@ -27,9 +27,10 @@ with jsonl.JRZ('corpus_staging/manifest.jsonl.gz') as manifest:
             with open(audiofile['transcript_pdf_path'], 'rb') as pdffile:
                 # pdftotext.PDF does not support slicing
                 pdf = pdftotext.PDF(pdffile)
+                pdf = [page.replace('\xa0', ' ') for page in pdf]
                 # some transcripts have a title page that shifts everything by 1
                 key_opener = 'in the supreme court of the united states'
-                opening_pages = [i for i in range(3) if key_opener in list(pdf)[i].lower()]
+                opening_pages = [i for i in range(3) if key_opener in pdf[i].lower()]
                 assert len(opening_pages) <= 2
                 assert max(opening_pages) <= 1
                 pdf = [pdf[i] for i in range(opening_pages[-1], len(pdf))]
