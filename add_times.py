@@ -13,7 +13,7 @@ with jsonl.JRZ('corpus_staging/manifest.jsonl.gz') as infile:
             pbar.set_postfix(case=audiofile['case_title'])
             with open(
                 audiofile['transcript_pdf_path'] + '.utts.txt.map.json',
-                'rb'
+                'r'
             ) as alignmentfile:
                 utterances = json.load(alignmentfile)['fragments']
             for i, utterance in enumerate(utterances):
