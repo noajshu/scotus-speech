@@ -10,3 +10,4 @@ python to_utterances.py
 bash align.sh
 python add_times.py
 bash cut_audio.sh
+python convert_corpus.py
