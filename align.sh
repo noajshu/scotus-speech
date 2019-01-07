@@ -5,3 +5,5 @@ gunzip -c corpus_staging/manifest.jsonl.gz | while read -r line; do
         "\"task_language=eng|os_task_file_format=json|is_text_type=plain\"" \
         \"$(jq -r '.transcript_pdf_path' <<< $line).utts.txt.map.json\" --presets-word -r="tts=espeak"
 done | parallel
+
+# NOTE THAT tts=aws aligns better, but I don't have aws credits
