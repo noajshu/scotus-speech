@@ -1,9 +1,15 @@
 PREFIX=$1 # e.g., downloads/2010/10-5400
-jq -c '.fragments[]' $PREFIX.pdf.utts.txt.map.json | head -n300 | tail -n24 | while read -r fragment; do
-    echo $(jq -r '.lines[0]' <<< $fragment) # | jq -r '.lines[0]'
-    echo duration $(echo $(jq -r '.end' <<< $fragment) - $(jq -r '.begin' <<< $fragment) | bc)s
+BLUE='\033[0;34m'
+CYAN='\033[0;36m'
+GREEN='\033[0;32m'
+SET='\033[0m'
+jq -c '.fragments[]' $PREFIX.pdf.utts.txt.map.json | tail -n115 | while read -r fragment; do
+    echo
+    # echo "I ${CYAN}love${SET} github."
+    echo -e "${BLUE}$(jq -r '.lines[0]' <<< $fragment)${SET}" # | jq -r '.lines[0]'
+    echo -e "${CYAN}duration${SET} ${GREEN}$(echo $(jq -r '.end' <<< $fragment) - $(jq -r '.begin' <<< $fragment) | bc)s"
     play -q $PREFIX.mp3 trim $(jq -r '.begin' <<< $fragment) =$(jq -r '.end' <<< $fragment)
-    sleep 0.25
+    # sleep 0.10
 done
 
 # These may be helpful for previewing alignments along the other stages of the pipeline
