@@ -3,7 +3,8 @@ xcode-select --install; brew update; brew install sox ffmpeg espeak
 # on ubuntu:
 sudo apt-get update
 sudo apt-get install -y build-essential libpoppler-cpp-dev \
-    pkg-config python-dev ffmpeg sox espeak jq parallel
+    pkg-config python-dev ffmpeg sox espeak jq parallel \
+    ffmpeg sox libsox-fmt-mp3
 
 pip install -r requirements.txt
 pip install numpy bs4 pdftotext requests
