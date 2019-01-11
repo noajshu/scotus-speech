@@ -1,7 +1,7 @@
 # scotus-speech
 Corpus of oral arguments (recorded speech + official transcripts) of the Supreme Court of the United States (SCOTUS).
 
-[Demo video here](https://youtu.be/UK5c_uxvUgU)
+## [DEMO VIDEO](https://youtu.be/UK5c_uxvUgU)
 
 <!-- ### Identifier: SCOTUS -->
 ### Summary: Medium-scale (595 hours 36 minutes 58 seconds) corpus of professionally transcribed formal conversational English speech
@@ -29,7 +29,7 @@ Scotus Speech is a collection of oral arguments presented before SCOTUS between 
 
 Although the conversations follow some procedural rules and formalities, they are fairly straightforward.
 
-Scotus Speech is inspired by the [LibriSpeech][(http://www.openslr.org/12) project, which produced a free ASR corpus from Project Gutenberg audiobooks.
+Scotus Speech is inspired by the [LibriSpeech](http://www.openslr.org/12) project, which produced a free ASR corpus from Project Gutenberg audiobooks.
 
 As all recordings and transcripts are in the public domain [see SCOTUS website](https://www.supremecourt.gov/oral_arguments/availabilityoforalargumenttranscripts.aspx),the <strike>sky</strike> law is the limit for use cases. Here are a few possibilities:
 
