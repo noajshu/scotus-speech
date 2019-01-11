@@ -9,19 +9,12 @@ Corpus of oral arguments (recorded speech + official transcripts) of the Supreme
 ### Lincese: MIT
 <!-- ### Download mirrors: TBD -->
 
-## Get the data:
+## Get the corpus:
 Download the corpus manifest and all utterance audio files
 - [default format here](https://drive.google.com/drive/folders/1cX_xf1F01l82dz59X2cIx0NPW5pAkatl?usp=sharing) (download only corpus.uterances.jsonl.gz (16 MB) for corpus text, audio.tar.gz (16 GB) contains all utterances)
 - in [kur format here](https://drive.google.com/drive/folders/1OEz5q8Vx_6FQZ6GZlp5PlZbi5yHhYiwf?usp=sharing)
 (both pages above link the sha256sum of the .tar.gz archives as well)
 
-## Regenerate the data:
-`bash steps.sh` will run the pipeline (takes a few days 4 cores). It is recommended to run the steps.sh lines one-by-one to make sure there are no intermediate errors.
-
-1. scrape the SCOTUS website
-2. download all transcript PDFs and recording MP3s
-3. parse PDF transcripts into conversation text, extracting speaker information
-4. tokenize transcripts to the word and punctuation level
 
 
 ## About this resource:
@@ -44,6 +37,14 @@ As all recordings and transcripts are in the public domain [see SCOTUS website](
 - chatbots / AI
 
 Forced alignment the transcripts to audio is achieved by the [aeneas package](https://www.readbeyond.it/aeneas/).
+
+## How to regenerate the data:
+`bash steps.sh` will run the pipeline (takes a few days 4 cores). It is recommended to run the steps.sh lines one-by-one to make sure there are no intermediate errors.
+
+1. scrape the SCOTUS website
+2. download all transcript PDFs and recording MP3s
+3. parse PDF transcripts into conversation text, extracting speaker information
+4. tokenize transcripts to the word and punctuation level
 
 
 ## Format notes
