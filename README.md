@@ -10,6 +10,9 @@ Corpus of oral arguments (recorded speech + official transcripts) of the Supreme
 <!-- ### Download mirrors: TBD -->
 
 ## Get the data:
+Download the corpus manifest and all utterance audio files
+- [default format here](https://drive.google.com/drive/folders/1cX_xf1F01l82dz59X2cIx0NPW5pAkatl?usp=sharing) (download only corpus.uterances.jsonl.gz (16 MB) for corpus text, audio.tar.gz (16 GB) contains all utterances)
+- in [kur format here](https://drive.google.com/drive/folders/1OEz5q8Vx_6FQZ6GZlp5PlZbi5yHhYiwf?usp=sharing)
 
 ## Regenerate the data:
 `bash steps.sh` will run the pipeline (takes a few days 4 cores). It is recommended to run the steps.sh lines one-by-one to make sure there are no intermediate errors.
