@@ -55,7 +55,14 @@ For simple parsing tasks, JSONL format enables...
 - schema flexibility
 - portability
 
-It is very easy to export this corpus to formats supported by [Kur](https://kur.deepgram.com/in_depth_examples.html#deepgram10-speech-recognition) and  [Kaldi](http://kaldi-asr.org/doc/data_prep.html). A script `convert_corpus.py` is included that does the job for Kur corpus format.
+It is very easy to export this corpus to formats supported by [Kur](https://kur.deepgram.com/in_depth_examples.html#deepgram10-speech-recognition) and  [Kaldi](http://kaldi-asr.org/doc/data_prep.html). A script `convert_corpus.py` is included that does the job for Kur corpus format. The Kur-formatted corpus is also provided at the link above. This format has stripped all characters except lowercase alphabetical, single quote "'", and space " ".
+I am a fan of the Kur corpus format for simplicity, but I also know that issues can arise with > 100k files in a single directory. To avoid this issue, the "default format" above is a depth-2 folder tree, splitting utterances into 1 directory per case. The file corpus.utterances.jsonl.gz is somewhat self-explanatory:
+- one utterance per line as JSON object
+- the JSON key '.utterance_dir' gives the directory within audio/ to grab the utterance mp3 from
+- the JSON key '.utterance_file' gives the mp3 file name
+- in other words you need to go to audio/utterance_dir/utterance_file to grab the audio file for each utterance
+- the JSON key '.text' gives the transcript text with minimal formatting changes (mixed upper/lower case, hyphens, etc.)
+    - you may wish to preprocess this file by adjusting the formatting / characters in each utterance transcript as done for the KUR format export, depending on your speech recognition engine.
 
 
 ## Benefits:
