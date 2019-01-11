@@ -4,7 +4,7 @@ Corpus of oral arguments (recorded speech + official transcripts) of the Supreme
 [Demo video here](https://youtu.be/UK5c_uxvUgU)
 
 <!-- ### Identifier: SCOTUS -->
-### Summary: Medium-scale (594 hours 42 minutes 13 seconds) corpus of professionally transcribed formal conversational English speech
+### Summary: Medium-scale (595 hours 36 minutes 58 seconds) corpus of professionally transcribed formal conversational English speech
 ### Category: Speech
 ### Lincese: MIT
 <!-- ### Download mirrors: TBD -->
@@ -67,13 +67,13 @@ It is very easy to export this corpus to formats supported by [Kur](https://kur.
 - Some audio contains multiple speakers when the courtroom is rowdy (this may be a disadvantage depending on your ASR goals)
 
 ## Disadvantages:
-- unaligned transcripts (no word-level timestamps) (coming soon!)
 - low diversity in:
     - accents
     - conversation topics
     - conversation styles
 - often repeated speakers (the justices)
 - some repeated utterances (formal procedure)
+- no word-level timestamps
 
 
 ## Next Steps
