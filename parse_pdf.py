@@ -23,7 +23,7 @@ with jsonl.JRZ('corpus_staging/manifest.jsonl.gz') as manifest:
     with jsonl.JWZ('corpus_staging/corpus.raw.jsonl.gz') as corpus:
         pbar = tqdm(manifest, total=num_files)
         for audiofile in pbar:
-            pbar.set_postfix(case=audiofile['case_title'])
+            pbar.set_postfix(case=audiofile['case_title']+' '+audiofile['transcript_pdf_path'])
             with open(audiofile['transcript_pdf_path'], 'rb') as pdffile:
                 # pdftotext.PDF does not support slicing
                 pdf = pdftotext.PDF(pdffile)
@@ -79,7 +79,8 @@ with jsonl.JRZ('corpus_staging/manifest.jsonl.gz') as manifest:
                 # closing parenthetical
                 assert (')' in content_lines[-1]) or \
                     ('submitted' in content_lines[-1]) or \
-                    ('adjourned' in content_lines[-1]), content_lines[-100:]
+                    ('adjourned' in content_lines[-1]) or \
+                    ('Reporting Corporation' in content_lines[-1]), content_lines[-100:]
                 parenthetical_start = len(content_lines) - next(
                     # typos such as forgotten '(' make this a fuzzy problem
                     k for k in range(1, 4)
