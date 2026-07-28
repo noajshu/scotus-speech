@@ -24,7 +24,7 @@ Although the conversations follow some procedural rules and formalities, they ar
 
 Scotus Speech is inspired by the [LibriSpeech](http://www.openslr.org/12) project, which produced a free ASR corpus from Project Gutenberg audiobooks.
 
-As all recordings and transcripts are in the public domain [see SCOTUS website](https://www.supremecourt.gov/oral_arguments/availabilityoforalargumenttranscripts.aspx),the <strike>sky</strike> law is the limit for use cases. Here are a few possibilities:
+As all recordings and transcripts are in the public domain [see SCOTUS website](https://www.supremecourt.gov/oral_arguments/availabilityoforalargumenttranscripts.aspx), the <strike>sky</strike> law is the limit for use cases. Here are a few possibilities:
 
 - training & benchmarking:
     - automatic speech recognition (ASR)
@@ -36,10 +36,10 @@ As all recordings and transcripts are in the public domain [see SCOTUS website](
 - academic study of SCOTUS oral arguments
 - chatbots / AI
 
-Forced alignment the transcripts to audio is achieved by the [aeneas package](https://www.readbeyond.it/aeneas/).
+Forced alignment of the transcripts to audio is achieved by the [aeneas package](https://www.readbeyond.it/aeneas/).
 
 ## How to regenerate the data:
-`bash steps.sh` will run the pipeline (takes a few days 4 cores). It is recommended to run the steps.sh lines one-by-one to make sure there are no intermediate errors.
+`bash steps.sh` will run the pipeline (takes a few days on 4 cores). It is recommended to run the steps.sh lines one-by-one to make sure there are no intermediate errors.
 
 1. scrape the SCOTUS website
 2. download all transcript PDFs and recording MP3s
