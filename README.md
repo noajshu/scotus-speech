@@ -6,12 +6,12 @@ Corpus of oral arguments (recorded speech + official transcripts) of the Supreme
 <!-- ### Identifier: SCOTUS -->
 ### Summary: Medium-scale (595 hours 36 minutes 58 seconds) corpus of professionally transcribed formal conversational English speech
 ### Category: Speech
-### Lincese: MIT
+### License: MIT
 <!-- ### Download mirrors: TBD -->
 
 ## Get the corpus:
 Download the corpus manifest and all utterance audio files
-- [default format here](https://drive.google.com/drive/folders/1cX_xf1F01l82dz59X2cIx0NPW5pAkatl?usp=sharing) (download only corpus.uterances.jsonl.gz (16 MB) for corpus text, audio.tar.gz (16 GB) contains all utterances)
+- [default format here](https://drive.google.com/drive/folders/1cX_xf1F01l82dz59X2cIx0NPW5pAkatl?usp=sharing) (download only corpus.utterances.jsonl.gz (16 MB) for corpus text, audio.tar.gz (16 GB) contains all utterances)
 - in [kur format here](https://drive.google.com/drive/folders/1OEz5q8Vx_6FQZ6GZlp5PlZbi5yHhYiwf?usp=sharing)
 (both pages above link the sha256sum of the .tar.gz archives as well)
 
@@ -86,4 +86,4 @@ I am a fan of the Kur corpus format for simplicity, but I also know that issues 
 
 ## Next Steps
 The alignment is very good but not 100% perfect. Espeak gives known failure cases. I would like to configure festival and see if it overcomes these failure cases.
-I've tried AWS Polly as the STT backend and found it to work extremely well with no failure cases yet, however the corpus is 35,652,395 characters which would cost about $140 for Polly STT on the whole thing. Before spending on that I want to do some benchmarks / training / data analysis of the corpus to make sure it's ready.
+I've tried AWS Polly as the TTS backend and found it to work extremely well with no failure cases yet, however the corpus is 35,652,395 characters which would cost about $140 for Polly TTS on the whole thing. Before spending on that I want to do some benchmarks / training / data analysis of the corpus to make sure it's ready.
